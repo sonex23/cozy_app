@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "563306132152",
+    "project_id": "cozy-46cfa",
+    "storage_bucket": "cozy-46cfa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563306132152:android:61a8f78f5c184385f87a4d",
+        "android_client_info": {
+          "package_name": "com.example.cozy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "563306132152-t8ngcm4m75lctrkfj7ft525tjo2daf42.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKRmc9yx5SJPQwA1osIZByrFNDd7fI0oQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "563306132152-t8ngcm4m75lctrkfj7ft525tjo2daf42.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
