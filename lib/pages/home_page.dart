@@ -142,13 +142,14 @@ class HomePage extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(left: edge),
-              child: FutureBuilder(
+              child: FutureBuilder<List<Space>?>(
+                initialData: [],
                 future: spaceProvider.getRecommendedSpaces(),
                 builder: (context, snapshot) {
                   if (snapshot.hasData) {
-                    List<Space> data = snapshot.data;
+                    List<Space>? data = snapshot.data;
                     return Column(
-                      children: data.map((item) => SpaceCard(item)).toList(),
+                      children: data!.map((item) => SpaceCard(item)).toList(),
                     );
                   }
                   return Center(

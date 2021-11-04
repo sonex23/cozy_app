@@ -2,7 +2,7 @@ import 'package:cozy/theme.dart';
 import 'package:flutter/material.dart';
 
 class RatingItem extends StatelessWidget {
-  final int rating;
+  final int? rating;
   RatingItem(this.rating);
 
   @override
@@ -12,7 +12,7 @@ class RatingItem extends StatelessWidget {
       star.add(Image.asset(
         'assets/images/Icon_star_solid.png',
         width: 20,
-        color: i <= rating ? accentColor : greyColor,
+        color: i <= rating! ? accentColor : greyColor,
       ));
     }
     return Container(

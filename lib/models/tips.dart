@@ -1,8 +1,8 @@
 class Tips {
-  int id;
-  String imageUrl;
-  String name;
-  String updatedAt;
+  int? id;
+  String? imageUrl;
+  String? name;
+  String? updatedAt;
 
   Tips({
     this.id,

@@ -1,7 +1,7 @@
 class City {
-  int id;
-  String name;
-  String imageUrl;
+  int? id;
+  String? name;
+  String? imageUrl;
   bool isPopular;
   City({
     this.id,

@@ -2,9 +2,9 @@ import 'package:cozy/theme.dart';
 import 'package:flutter/material.dart';
 
 class FacilityItem extends StatelessWidget {
-  final String imageUrl;
-  final int sum;
-  final String name;
+  final String? imageUrl;
+  final int? sum;
+  final String? name;
 
   FacilityItem({this.imageUrl, this.name, this.sum});
 
@@ -12,7 +12,7 @@ class FacilityItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       Image.asset(
-        imageUrl,
+        imageUrl!,
         width: 32,
       ),
       SizedBox(

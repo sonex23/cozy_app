@@ -12,7 +12,7 @@ class TipsCard extends StatelessWidget {
     return Row(
       children: [
         Image.asset(
-          tips.imageUrl,
+          tips.imageUrl!,
           width: 80,
         ),
         SizedBox(
@@ -22,7 +22,7 @@ class TipsCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              tips.name,
+              tips.name!,
               style: blackTextStyle.copyWith(
                 fontSize: 18,
               ),

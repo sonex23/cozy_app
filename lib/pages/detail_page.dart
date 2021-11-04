@@ -25,13 +25,14 @@ class DetailPage extends StatelessWidget {
 
     showConfirm() {
       CoolAlert.show(
-          context: context,
-          type: CoolAlertType.confirm,
-          text: "Apa kamu yakin ingin menghubungi pemilik kos ?",
-          confirmBtnText: "Hubungi",
-          cancelBtnText: "Batal",
-          onConfirmBtnTap: () => launchURL('tel:+${space.phone}'),
-          confirmBtnColor: primaryColor);
+        context: context,
+        type: CoolAlertType.confirm,
+        text: "Apa kamu yakin ingin menghubungi pemilik kos ?",
+        confirmBtnText: "Hubungi",
+        cancelBtnText: "Batal",
+        onConfirmBtnTap: () => launchURL('tel:+${space.phone}'),
+        confirmBtnColor: primaryColor,
+      );
     }
 
     return Scaffold(
@@ -41,7 +42,7 @@ class DetailPage extends StatelessWidget {
         child: Stack(
           children: [
             Image.network(
-              space.imageUrl,
+              space.imageUrl!,
               height: 350,
               width: MediaQuery.of(context).size.width,
               fit: BoxFit.cover,
@@ -70,7 +71,7 @@ class DetailPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                space.name,
+                                space.name!,
                                 style: blackTextStyle.copyWith(fontSize: 22),
                               ),
                               SizedBox(
@@ -141,7 +142,7 @@ class DetailPage extends StatelessWidget {
                         height: 88,
                         child: ListView(
                           scrollDirection: Axis.horizontal,
-                          children: space.photos.map((item) {
+                          children: space.photos!.map((item) {
                             return Container(
                               margin: EdgeInsets.only(right: 18),
                               child: PhotoItem(item),
@@ -168,7 +169,7 @@ class DetailPage extends StatelessWidget {
                           ),
                           InkWell(
                             onTap: () {
-                              launchURL(space.mapUrl);
+                              launchURL(space.mapUrl!);
                             },
                             child: Image.asset(
                               'assets/images/btn_map.png',

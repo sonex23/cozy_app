@@ -2,7 +2,7 @@ import 'package:cozy/theme.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavbarItem extends StatelessWidget {
-  final String imageUrl;
+  final String? imageUrl;
   final bool isActive;
   BottomNavbarItem({this.imageUrl, this.isActive = false});
 
@@ -12,7 +12,7 @@ class BottomNavbarItem extends StatelessWidget {
       children: [
         Spacer(),
         Image.asset(
-          imageUrl,
+          imageUrl!,
           width: 26,
         ),
         Spacer(),
