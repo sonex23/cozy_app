@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cozy/models/space.dart';
 import 'package:cozy/pages/error_page.dart';
 import 'package:cozy/providers/detail_provider.dart';
@@ -18,10 +19,8 @@ class DetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     bool _isFavorited;
 
-    launchURL(String url) async => await canLaunch(url)
-        ? await launch(url)
-        : Navigator.push(
-            context, MaterialPageRoute(builder: (context) => ErrorPage()));
+    launchURL(String url) async =>
+        await canLaunch(url) ? await launch(url) : Navigator.push(context, MaterialPageRoute(builder: (context) => ErrorPage()));
 
     showConfirm() {
       CoolAlert.show(
@@ -41,8 +40,8 @@ class DetailPage extends StatelessWidget {
         bottom: false,
         child: Stack(
           children: [
-            Image.network(
-              space.imageUrl!,
+            CachedNetworkImage(
+              imageUrl: space.imageUrl!,
               height: 350,
               width: MediaQuery.of(context).size.width,
               fit: BoxFit.cover,
@@ -184,14 +183,16 @@ class DetailPage extends StatelessWidget {
                       Container(
                         width: MediaQuery.of(context).size.width - (2 * edge),
                         height: 50,
-                        child: RaisedButton(
+                        child: ElevatedButton(
                           onPressed: () {
                             showConfirm();
                           },
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(17),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: primaryColor,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(17.0),
+                            ),
                           ),
-                          color: primaryColor,
                           child: Text(
                             'Book Now',
                             style: whiteTextStyle.copyWith(
@@ -227,9 +228,7 @@ class DetailPage extends StatelessWidget {
                           provider.setIsfavorited(!_isFavorited);
                         },
                         child: Image.asset(
-                          _isFavorited
-                              ? 'assets/images/btn_wishlist_active.png'
-                              : 'assets/images/btn_wishlist.png',
+                          _isFavorited ? 'assets/images/btn_wishlist_active.png' : 'assets/images/btn_wishlist.png',
                           width: 40,
                         ),
                       );

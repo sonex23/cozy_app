@@ -15,20 +15,20 @@ class Space {
   int? numberOfCupboards;
 
   Space({
-    this.id,
-    this.name,
-    this.imageUrl,
-    this.city,
-    this.country,
-    this.price,
-    this.rating,
-    this.address,
-    this.phone,
-    this.mapUrl,
-    this.photos,
-    this.numberOfKitchens,
-    this.numberOfBedrooms,
-    this.numberOfCupboards,
+    required this.id,
+    required this.name,
+    required this.imageUrl,
+    required this.city,
+    required this.country,
+    required this.price,
+    required this.rating,
+    required this.address,
+    required this.phone,
+    required this.mapUrl,
+    required this.photos,
+    required this.numberOfKitchens,
+    required this.numberOfBedrooms,
+    required this.numberOfCupboards,
   });
 
   Space.fromJson(json) {

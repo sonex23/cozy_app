@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 import 'package:http/http.dart' as http;
 
-var url = Uri.parse('https://bwa-cozy.herokuapp.com/recommended-spaces');
+var url = Uri.parse('https://bwa-cozy-api.vercel.app/recommended-spaces');
 
 class SpaceProvider extends ChangeNotifier {
   Future<List<Space>> getRecommendedSpaces() async {

@@ -11,7 +11,9 @@ class SplashPage extends StatelessWidget {
           children: [
             Align(
               alignment: Alignment.bottomCenter,
-              child: Image.asset('assets/images/splash.png'),
+              child: Image.asset(
+                'assets/images/splash.png',
+              ),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 50, left: 30),
@@ -49,16 +51,16 @@ class SplashPage extends StatelessWidget {
                     width: 210,
                     height: 50,
                     // ignore: deprecated_member_use
-                    child: RaisedButton(
+                    child: ElevatedButton(
                       onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => HomePage()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
                       },
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(17)),
-                      color: primaryColor,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: primaryColor,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(17.0),
+                        ),
+                      ),
                       child: Text(
                         'Explore Now',
                         style: whiteTextStyle.copyWith(fontSize: 18),

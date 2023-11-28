@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cozy/models/space.dart';
 import 'package:cozy/pages/detail_page.dart';
 import 'package:flutter/material.dart';
@@ -11,8 +12,7 @@ class SpaceCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => DetailPage(space)));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => DetailPage(space)));
       },
       child: Container(
         padding: EdgeInsets.only(bottom: 20),
@@ -26,8 +26,8 @@ class SpaceCard extends StatelessWidget {
                 height: 110,
                 child: Stack(
                   children: [
-                    Image.network(
-                      space.imageUrl!,
+                    CachedNetworkImage(
+                      imageUrl: space.imageUrl!,
                       width: 130,
                       height: 110,
                       fit: BoxFit.cover,
