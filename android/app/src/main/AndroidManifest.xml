@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.cozy">
+    package="com.sonex23.cozy">
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- Provide required visibility configuration for API level 30 and above -->
     <queries>
@@ -14,7 +14,7 @@
       </intent>
     </queries>
    <application
-        android:label="Cozy"
+        android:label="Cozy App Sona"
         android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
