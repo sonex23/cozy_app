@@ -13,6 +13,8 @@ class PhotoItem extends StatelessWidget {
         height: 88,
         width: 110,
         fit: BoxFit.cover,
+        errorWidget: (context, url, error) => Image.asset('assets/images/photo2.png'),
+        errorListener: (value) => print(value.toString()),
       ),
     );
   }

@@ -143,7 +143,7 @@ class HomePage extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(left: edge),
               child: FutureBuilder<List<Space>?>(
-                initialData: [],
+                initialData: null,
                 future: spaceProvider.getRecommendedSpaces(),
                 builder: (context, snapshot) {
                   if (snapshot.hasData) {

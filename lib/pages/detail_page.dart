@@ -19,8 +19,9 @@ class DetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     bool _isFavorited;
 
-    launchURL(String url) async =>
-        await canLaunch(url) ? await launch(url) : Navigator.push(context, MaterialPageRoute(builder: (context) => ErrorPage()));
+    launchURL(String url) async => await canLaunchUrl(Uri.parse(url))
+        ? await launchUrl(Uri.parse(url))
+        : Navigator.push(context, MaterialPageRoute(builder: (context) => ErrorPage()));
 
     showConfirm() {
       CoolAlert.show(
